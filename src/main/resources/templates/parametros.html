@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title th:text="${titulo}"></title>
+	</head>
+	<body>
+		<h1 th:text="${titulo}"></h1>
+		<div>
+			<h1>Parametro recibido por la url</h1>
+			El parametro es: <span style="color: #A96185" th:text="${parametro}"></span>
+			El otro parametro es: <span style="color: #A96185" th:text="${otroValor}"></span>
+		</div>
+		<div th:if="${jugador != null}">
+			<h1>Parametro recibido por path</h1>
+			El jugador es: <span style="color: #A96185" th:text="${jugador.nombre}"></span>
+			( <span style="color: #A96185" th:text="${jugador.numero}"></span> )
+		</div>
+	</body>
+</html>
